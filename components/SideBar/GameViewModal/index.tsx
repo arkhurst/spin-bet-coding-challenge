@@ -137,7 +137,6 @@ export const GameViewModal = ({ game, onClose }: GameViewModalProps) => {
           <CountryText>{game.country}</CountryText>
           <LeagueText>{game.competition}</LeagueText>
           <DateText status={game.liveStatus}>{gameTime}</DateText>
-
           <TeamScoresContainer>
             <TeamScores>
               <span>{game.homeTeam.name}</span>

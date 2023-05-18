@@ -107,7 +107,6 @@ export function SidebarItem({ game, isActive }: Props) {
                 <span>{game.awayScore.current ?? "-"}</span>
               </TeamScores>
             </Margin>
-
             <StatusContainer top={15} left={10}>
               <StatusText status={statusText}>
                 {statusText} {/\d/.test(statusText) ? "mins" : null}

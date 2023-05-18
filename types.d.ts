@@ -4,8 +4,7 @@ type Maybe<T> = T | null;
 
 type Empty = {};
 
-
 type GameFilter = {
-  label: string
-  value: string
-}
+  label: string;
+  value: string;
+};

@@ -1,2 +1,2 @@
-export * from './useGetActiveGameId'
-export * from './useDisclosure'
+export * from "./useGetActiveGameId";
+export * from "./useDisclosure";
