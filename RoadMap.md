@@ -11,9 +11,9 @@
 
 ## Fixes
 
-- [ ] Restructure Styled Components
+- [x] Restructure Styled Components
 - [x] Relocate the font importation into document head
 - [x] Fix the activeness of the sidebar item.
 - [x] Scroll to active sidebar item
-- [ ] Error with styled components
-- [ ] Work on progress
+- [x] Error with styled components
+- [x] Work on progress
