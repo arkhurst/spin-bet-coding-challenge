@@ -1,10 +1,6 @@
 import { useGetActiveGameId } from "@/hooks/index";
 import { useMemo } from "react";
-import sportsData from "@/data/sports.json";
 import { formatDate } from "@/lib/date-utils";
-import { NotFoundWell } from "./NotFound";
-import { useRouter } from "next/router";
-import { LoadingWell } from "./Loading";
 import { DateText } from "../atoms";
 import { CircularProgressBar } from "./Progress";
 import {
@@ -17,9 +13,10 @@ import {
   ScoresText,
   TeamsContainer,
 } from "./index.styles";
+import { NotFoundWell } from "./NotFound";
+import sportsData from "@/data/sports.json";
 
 export function GameView() {
-  const { isReady } = useRouter();
   const activeGameId = useGetActiveGameId();
 
   const game = useMemo(
@@ -44,14 +41,6 @@ export function GameView() {
       return "LIVE";
     }
   }, [game]);
-
-  if (!isReady) {
-    return (
-      <Container>
-        <LoadingWell />
-      </Container>
-    );
-  }
 
   if (!game)
     return (
