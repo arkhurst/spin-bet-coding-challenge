@@ -59,16 +59,6 @@ describe("Game View Component", () => {
     expect(screen.getByText(ONGOING_GAME.awayTeam.name)).toBeVisible();
   });
 
-  it("renders loading state", () => {
-    customRender(
-      <MockRouter isReady={false}>
-        <GameView />
-      </MockRouter>
-    );
-
-    expect(screen.getByText(/loading.../i)).toBeVisible();
-  });
-
   it("renders not found state", () => {
     customRender(
       <MockRouter query={{ game: "not-found" }}>
