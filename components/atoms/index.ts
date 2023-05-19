@@ -1,31 +1,23 @@
+/**
+ * @module atoms - Contains all base styles
+ */
+
 import styled from "styled-components";
 
 interface MarginProps {
-  top?: number;
-  left?: number;
-  bottom?: number;
-  right?: number;
+  top: number;
+  left: number;
+  bottom: number;
+  right: number;
 }
 
-export const Margin = styled.div<MarginProps>`
+export const Margin = styled.div<Partial<MarginProps>>`
   margin-top: ${(props) => props.top ?? 0}px;
   margin-bottom: ${(props) => props.bottom ?? 0}px;
   margin-left: ${(props) => props.left ?? 0}px;
   margin-right: ${(props) => props.right ?? 0}px;
 `;
 
-export const ModalContainer = styled.div`
-  position: absolute;
-  z-index: 1;
-  top: 0px;
-  left: 0px;
-  height: 100vh;
-  width: 100vw;
-  background: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 export const MediumSizeText = styled.span`
   font-size: 2rem;
   color: ${({ theme }) => theme.colors.white};
@@ -49,17 +41,19 @@ export const DateText = styled.span<{ status: string }>`
   }};
 `;
 
-export const Header = styled.div`
+export const Button = styled.button`
+  border: 0;
+  cursor: pointer;
+`;
+
+export const FlexBetween = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 30px;
 `;
 
-export const CloseButton = styled.button`
-  background: transparent;
-  border: 0;
-  color: ${({ theme }) => theme.colors.red.primary};
-  cursor: pointer;
-  font-size: 1.1rem;
+export const FlexCenter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
