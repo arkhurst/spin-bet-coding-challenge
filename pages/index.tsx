@@ -1,6 +1,7 @@
 import { GameView } from "@/components/GameView";
 import { Sidebar } from "@/components/SideBar";
 import styled from "styled-components";
+import Head from "next/head";
 
 const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.background.primary};
@@ -21,11 +22,16 @@ const GridContainer = styled.div`
 `;
 export default function Home() {
   return (
-    <Container>
-      <GridContainer>
-        <Sidebar />
-        <GameView />
-      </GridContainer>
-    </Container>
+    <>
+      <Head>
+        <title>Spin Bet Test</title>
+      </Head>
+      <Container>
+        <GridContainer>
+          <Sidebar />
+          <GameView />
+        </GridContainer>
+      </Container>
+    </>
   );
 }
